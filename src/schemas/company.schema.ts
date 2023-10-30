@@ -8,7 +8,7 @@ const companySchema = z.object({
     CNPJ:z.string().length(14),
     CEP:z.string().length(8),
     address:z.string(),
-    addressNumber:z.string().length(3),
+    addressNumber:z.string(),
     phoneNumber:z.string().length(11),
     email:z.string().email()
 })

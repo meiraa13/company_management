@@ -23,7 +23,7 @@ export class Company {
     @Column({type:"varchar"})
     address:string
 
-    @Column({type:"varchar", length:3})
+    @Column({type:"varchar"})
     addressNumber:string
 
     @Column({type:"varchar", length:11})
