@@ -3,7 +3,7 @@ import { AppError } from "../error";
 
 export async function readOneCompanyService (companyCnpj:string){
     const company = await companyRepository.findOne({
-        where:{CNPJ:companyCnpj}
+        where:{cnpj:companyCnpj}
     })
 
     if(!company){

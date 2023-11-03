@@ -15,10 +15,10 @@ export class Company {
     companyName:string
 
     @Column({type:"varchar", length:14})
-    CNPJ:string
+    cnpj:string
 
     @Column({type:"varchar", length:8})
-    CEP:string
+    cep:string
 
     @Column({type:"varchar"})
     address:string

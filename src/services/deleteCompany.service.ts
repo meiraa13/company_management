@@ -6,6 +6,6 @@ export async function deleteCompanyService(companyId:number) {
     })
 
     await companyRepository.delete(company!)
+}
 
     
-}

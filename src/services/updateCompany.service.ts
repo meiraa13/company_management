@@ -3,7 +3,6 @@ import { TCompanyResponse, TCompanyUpdate } from "../interfaces/company.interfac
 import { companyResponseSchema } from "../schemas/company.schema";
 
 export async function updateCompanyService(companyId:number, data:TCompanyUpdate):Promise<TCompanyResponse> {
-
     const currentCompany = await companyRepository.findOne({
         where:{id:companyId}
     })
@@ -17,6 +16,6 @@ export async function updateCompanyService(companyId:number, data:TCompanyUpdate
     const companyResponse:TCompanyResponse = companyResponseSchema.parse(updatedCompany)
 
     return companyResponse
+}
 
     
-}

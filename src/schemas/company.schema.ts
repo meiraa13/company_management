@@ -5,11 +5,11 @@ const companySchema = z.object({
     clientName:z.string(),
     password:z.string(),
     companyName:z.string(),
-    CNPJ:z.string().length(14),
-    CEP:z.string().length(8),
+    cnpj:z.string().length(14).regex(/^[0-9]+$/),
+    cep:z.string().length(8).regex(/^[0-9]+$/),
     address:z.string(),
-    addressNumber:z.string(),
-    phoneNumber:z.string().length(11),
+    addressNumber:z.string().regex(/^[0-9]+$/),
+    phoneNumber:z.string().length(11).regex(/^[0-9]+$/),
     email:z.string().email()
 })
 
